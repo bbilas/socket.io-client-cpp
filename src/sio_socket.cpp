@@ -570,7 +570,7 @@ namespace sio
         m_impl->off_error();
     }
 
-    void socket::emit(std::string const& name, message::list const& msglist, std::function<void (message::list const&)> const& ack)
+    void socket::emit_event(std::string const& name, message::list const& msglist, std::function<void (message::list const&)> const& ack)
     {
         m_impl->emit(name, msglist,ack);
     }
